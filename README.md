@@ -7,8 +7,7 @@
 ---
 
 ## Avenue Dev Test
-This is a simple Next JS React project. Using the design in Figma, build out the front-end to display the array of results in a grid, and then filter these results as the user types in the search input. 
-
+This is a simple Next JS React project. Using the design in Figma, build out the front-end to display the array of results in a grid, and then filter these results as the user types in the search input.    
 Follow this [link](https://avenuedesign.notion.site/Avenue-Dev-Test-Instructions-8f652cff875a473c8da6fd90d73c319c) to see the complete instructions and requirements.
 
 
@@ -39,18 +38,16 @@ Listed below are the technologies used to make this app possible
 
 ## Install Packages/Dependencies
 Install packages using the following command:
-- Go to `avenue-dev-test` folder: `cd avenue-dev-test`
+- Go to `maecana_avenue_dev_test` folder: `cd maecana_avenue_dev_test`
 - Yarn Install: `yarn install`
 
 
 ## Run the Client
-Start the client server by going to `avenue-dev-test` folder and running `development` environment
-- `cd avenue-dev-test/`
+Start the client server by going to `maecana_avenue_dev_test` folder and running `development` environment
+- `cd maecana_avenue_dev_test/`
 - Yarn Run: `yarn run dev`
 - Go to `http://localhost:3000/`
 
 
 ## License: 
 This code is licensed under the MIT License.
-
-
