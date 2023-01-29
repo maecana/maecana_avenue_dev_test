@@ -1,7 +1,7 @@
 // Package / Dependency Imports
 import React from "react";
 // Local Imports
-import { Line, AvenueLink } from "@primitives";
+import { Line } from "@primitives";
 import {
     LazyPostItemContainer,
     LazyTypeContainer,
@@ -38,7 +38,6 @@ const LazyLoadPostItem = () => {
                     
                     <Footer>
                         <Line color="#5CC9E2" height="2px" css={{marginTop:"32px", marginBottom: "16px"}} />
-                        <AvenueLink href="#"></AvenueLink>
                     </Footer>
                 </PostBase>
             </LazyPostItemContainer>

@@ -23,7 +23,6 @@ export const PostContainer = styled("div", {
 
 export const PostWrapper = styled("div", {
   width: "100%",
-  minHeight: "100vh",
   boxSizing: 'border-box',
   display: 'grid',
   justifyItems: 'center',
