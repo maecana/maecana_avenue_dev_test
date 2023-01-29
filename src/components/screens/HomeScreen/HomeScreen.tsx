@@ -9,23 +9,24 @@ import { ItemProps } from "./Posts/PostItems";
 import { SearchInput } from "./SearchInput";
 import { PostContainer, PageWrapper, PostWrapper } from "./style";
 import LazyLoadPostItem from "./Posts/LazyLoadPostItem";
-import { setPostItems, setFilteredPostItems, selectFilteredPostItems } from "src/features/Post/PostSlice";
+import { setPostItems, setFilteredPostItems, selectFilteredPostItems, selectFilteredCount } from "src/features/Post/PostSlice";
 
 
 // Simulate Lazy Loading
 const LazyPostItems = React.lazy(() => {
   return new Promise(resolve => setTimeout(resolve, 5 * 1000)).then(
     () => import("./Posts/PostItems")
-  );
-});
-
-
-interface IProps {
-  items: ItemProps[];
-  callToAction: CallToActionProps;
-}
+    );
+  });
+  
+  
+  interface IProps {
+    items: ItemProps[];
+    callToAction: CallToActionProps;
+  }
 function HomeScreen({ items, callToAction }: IProps) {
   const dispatch = useDispatch();
+  const filteredCount = useSelector(selectFilteredCount);
   const filteredItems = useSelector(selectFilteredPostItems);
   
   useEffect(() => {
@@ -40,17 +41,21 @@ function HomeScreen({ items, callToAction }: IProps) {
       <Spacer height={[32, null, 40]} />
 
       <PostContainer>
-        <PostWrapper>
-          {
-            filteredItems && filteredItems.map(
-              (item: any, index: number) => (
-                <Suspense fallback={<LazyLoadPostItem />}>
-                  <LazyPostItems key={index} {...item} />
-                </Suspense>
+        {(filteredCount == 0) ? (
+            <p>We couldn't find any results for your query. Please try different keywords.</p>
+          ):
+          (<PostWrapper>
+            {
+              filteredItems && filteredItems.map(
+                (item: any, index: number) => (
+                  <Suspense fallback={<LazyLoadPostItem />}>
+                    <LazyPostItems key={index} {...item} />
+                  </Suspense>
+                )
               )
-            )
-          }
-        </PostWrapper>
+            }
+          </PostWrapper>
+        )}
       </PostContainer>
       
       <Spacer height={[32, null, 40]} />

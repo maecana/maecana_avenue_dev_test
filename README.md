@@ -11,7 +11,7 @@ This is a simple Next JS React project. Using the design in Figma, build out the
 Follow this [link](https://avenuedesign.notion.site/Avenue-Dev-Test-Instructions-8f652cff875a473c8da6fd90d73c319c) to see the complete instructions and requirements.
 
 
-## Description: 
+## Description
 - A simple Next JS app.
 - This is program uses NextJS, that utilizes the Redux JS library.
 - The design, and code structure is the main focus of this development.
