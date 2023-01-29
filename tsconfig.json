@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@theme": ["src/theme/index"],
+      "@theme/*": ["src/theme/*"],
+      "@primitives": ["src/components/primitives/index"],
+      "@primitives/*": ["src/components/primitives/*"],
+      "@screens": ["src/components/screens/index"],
+      "@screens/*": ["src/components/screens/*"],
+      "@utils/*": ["src/utils/*"],
+      "@helpers/*": ["src/helpers/*"],
+      "@types": ["src/types/index"],
+      "@/functions": ["functions"],
+      "@/functions/*": ["functions/*"],
+      "@/lib": ["lib"],
+      "@/lib/*": ["lib/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src",
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.json"
+  ],
+  "exclude": ["node_modules", "functions", "lib"]
+}

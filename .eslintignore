@@ -1,0 +1,12 @@
+.next
+next-env.d.ts
+node_modules
+dist
+next
+lib
+yarn.lock
+package-lock.json
+public
+.eslintrc.js
+lib
+functions
